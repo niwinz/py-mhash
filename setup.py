@@ -11,7 +11,7 @@ setup(
     author_email = "niwi@niwi.be",
     version='0.1',
     packages = [
-        "mhash",
+        "mhashlib",
     ],
     description = description.strip(),
     zip_safe=False,
