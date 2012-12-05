@@ -2,28 +2,32 @@
 py-mhash
 ========
 
-Mhash ctypes bindings for Python. It keeps the same interface as hashlib (part of the standard library)
+Modern mhash bindings for Python (build with ctypes). It keeps the same interface as hashlib (part of the standard library)
 
-Tested with:
+**Tested with**: python >= 3.2, python >= 2.7, pypy >= 1.9
 
-- python 3.3
+Actually supports all hash algorithms as mhash library: crc, md5, sha*, ripemd*, tiger*, haval*, gost, adler, whirlpool, snefru*
 
+How install it?
+^^^^^^^^^^^^^^^
 
-Current hash algorithms exposed:
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-- tiger192
-- tiger160
-- tiger128
-- gost
+You can install this module from python package index: `pip install  py-mhash`
 
 
 How use it?
 ^^^^^^^^^^^
 
-.. code-block::
+Example of use gost hash algorithm:
 
-    >>> import mhash
-    >>> mhash.Gost(b"hello").hexdigest()
+.. code-block:: python
+
+    >>> import mhashlib
+    >>> mhashlib.gost(b"hello").hexdigest()
     'a7eb5d08ddf2363f1ea0317a803fcef81d33863c8b2f9f6d7d14951d229f4567'
 
+
+Run tests
+^^^^^^^^^
+
+.. code-block:: console
+    python -m unittest -vv
