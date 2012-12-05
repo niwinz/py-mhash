@@ -30,4 +30,5 @@ Run tests
 ^^^^^^^^^
 
 .. code-block:: console
+
     python -m unittest -vv
