@@ -9,7 +9,7 @@ setup(
     url = "https://github.com/niwibe/py-mhash",
     author = "Andrei Antoukh",
     author_email = "niwi@niwi.be",
-    version='0.1',
+    version='1.0',
     packages = [
         "mhashlib",
     ],
