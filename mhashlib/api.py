@@ -5,7 +5,7 @@ import ctypes.util
 
 def load_library():
     libpath = ctypes.util.find_library('mhash')
-    return ctypes.CDLL(libpath)
+    return ctypes.CDLL(libpath), ctypes.CDLL(None)
 
 MHASH_CRC32     = 0
 MHASH_MD5       = 1
@@ -35,7 +35,7 @@ MHASH_SNEFRU256 = 27
 
 
 try:
-    lib = load_library()
+    lib, c_lib = load_library()
     lib.mhash_init.argtypes = [ctypes.c_int]
     lib.mhash_init.restype = ctypes.c_void_p
 

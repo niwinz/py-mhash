@@ -35,6 +35,7 @@ class BaseHash(object):
         size = api.lib.mhash_get_block_size(self._hash_type)
         cvp = api.lib.mhash_end(self.td)
         self._result = ctypes.cast(cvp, ctypes.POINTER(ctypes.c_char))[:size]
+        api.c_lib.free(cvp)
 
         return self._result
 
