@@ -9,7 +9,7 @@ setup(
     url = "https://github.com/niwibe/py-mhash",
     author = "Andrei Antoukh",
     author_email = "niwi@niwi.be",
-    version='1.1',
+    version='1.2',
     packages = [
         "mhashlib",
     ],
@@ -17,8 +17,7 @@ setup(
     zip_safe=False,
     include_package_data = True,
     classifiers = [
-        #"Development Status :: 5 - Production/Stable",
-        "Development Status :: 4 - Beta",
+        "Development Status :: 5 - Production/Stable",
         #"Operating System :: OS Independent",
         "Environment :: Web Environment",
         "License :: OSI Approved :: BSD License",
