@@ -2,6 +2,7 @@
 
 from . import api
 import binascii
+import ctypes
 
 class BaseHash(object):
     _hash_type = None
@@ -32,9 +33,8 @@ class BaseHash(object):
             return self._result
 
         size = api.lib.mhash_get_block_size(self._hash_type)
-        self._result = api.lib.mhash_end(self.td)
-        if len(self._result) > size:
-            self._result = self._result[:size]
+        cvp = api.lib.mhash_end(self.td)
+        self._result = ctypes.cast(cvp, ctypes.POINTER(ctypes.c_char))[:size]
 
         return self._result
 

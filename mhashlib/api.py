@@ -41,7 +41,7 @@ try:
 
     lib.mhash.argtypes = [ctypes.c_void_p, ctypes.c_char_p, ctypes.c_int]
     lib.mhash_end.argtypes = [ctypes.c_void_p]
-    lib.mhash_end.restype = ctypes.c_char_p
+    lib.mhash_end.restype = ctypes.c_void_p
 
     lib.mhash_get_block_size.argtypes = [ctypes.c_int]
     lib.mhash_get_block_size.restype = ctypes.c_int
