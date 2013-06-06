@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 
 import unittest
 import mhashlib
@@ -62,8 +63,6 @@ class MHashlibTest(unittest.TestCase):
         valid_digest = b'f33eb2a3152af27e719474e8888da43c53b1ea7a629796eb7a67ecc539fc29a8'
         self.assertEqual(valid_digest, hash.hexdigest())
 
-    def test_binary_conversion(self):
-        hash = mhashlib.tiger192("gsadghas").digest()
-        valid_digest = b'8e9ce14e903592a2bc89456d6c2487d300ab05a3f2f67ca7'
-        self.assertEqual(valid_digest, hash.hexdigest())
+if __name__ == "__main__":
+    unittest.main()
 
