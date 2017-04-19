@@ -45,6 +45,8 @@ try:
 
     lib.mhash_get_block_size.argtypes = [ctypes.c_int]
     lib.mhash_get_block_size.restype = ctypes.c_int
+
+    c_lib.free.argtypes = [ctypes.c_void_p]
 except AttributeError:
     raise ImportError('mhash shared library not found or incompatible')
 except (OSError, IOError):
